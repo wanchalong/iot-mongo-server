@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html ng-app="todoApp">
+   <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="todo.js"></script>
+        <link rel="stylesheet" href="todo.css">
+    </head>
+    <body ng-controller="TodoListController as todoList">
+       
+          <form ng-submit="todoList.addIOT()">
+
+ 			timestamp :  <input type="text" ng-model="todoList.time"><br>
+			IOT-ID :  <input type="text" ng-model="todoList.ID"><br>
+            temperature : <input type="text" ng-model="todoList.temp"><br>
+            relative_humidity: <input type="text" ng-model="todoList.relative"><br>
+
+            <input class="btn-primary" type="submit" value="Add">
+
+          </form>
+      </body>
+    </html>
+
