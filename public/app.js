@@ -4,14 +4,12 @@ angular.module('app', [])
     scope.name = 'Nati'
 
 	
-
+    show()
     scope.addIOT = function(input){
     	console.log(input)
     	Saveiot()
 
-
 }
-
 function Saveiot(input) {
         $http.post('/api/iot', input)
           .then(function success (response) {
@@ -24,14 +22,14 @@ function Saveiot(input) {
       }
 
 
-
+function show(){
  $http.get('/api/iot').success(function(response){
 
     	console.log(response)
-    	//scope.data = response
+    	scope.data = response
     })
 
-
+}
 
 
 
