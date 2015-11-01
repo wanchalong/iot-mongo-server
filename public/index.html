@@ -1,23 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body ng-controller="AppController as scope">
+  {{scope.data}}
 
-<!doctype html>
-<html ng-app="todoApp">
-   <head>
-     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-        <script src="todo.js"></script>
-        <link rel="stylesheet" href="todo.css">
-    </head>
-    <body ng-controller="TodoListController as todoList">
-       
-          <form ng-submit="todoList.addIOT()">
 
- 			timestamp :  <input type="text" ng-model="todoList.time"><br>
-			IOT-ID :  <input type="text" ng-model="todoList.ID"><br>
-            temperature : <input type="text" ng-model="todoList.temp"><br>
-            relative_humidity: <input type="text" ng-model="todoList.relative"><br>
 
-            <input class="btn-primary" type="submit" value="Add">
+	<form ng-submit='scope.addIOT(input)'>
 
-          </form>
-      </body>
-    </html>
 
+  timestamp: <input type="text" ng-model="input.timestamp"><br>
+   iot_id:  <input type="text" ng-model="input.iot_id"><br>
+     temperature: <input type="text" ng-model="input.temperature"><br>
+       relative_humidity: <input type="text" ng-model="input.relative_humidity"><br>
+
+	<input type="submit" value="add">
+	</form>
+
+
+
+</body>
+</html>
