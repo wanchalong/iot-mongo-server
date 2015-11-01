@@ -3,24 +3,34 @@ angular.module('app', [])
     var scope = this
     scope.name = 'Nati'
 
-
+	
 
     scope.addIOT = function(input){
     	console.log(input)
-    	save()
+    	Saveiot()
+
 
 }
 
+function Saveiot(input) {
+        $http.post('/api/iot', input)
+          .then(function success (response) {
+            console.log(response)
+
+            alert('Success')
+          }, function error (response) {
+            alert(response.data.message)
+        })
+      }
 
 
 
-scope.save = function(){
  $http.get('/api/iot').success(function(response){
 
     	console.log(response)
-    	scope.data = response
+    	//scope.data = response
     })
-}
+
 
 
 
