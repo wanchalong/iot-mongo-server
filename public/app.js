@@ -3,7 +3,12 @@ angular.module('app', [])
     var scope = this
     scope.name = 'Nati'
 
-	
+	scope.toTime = function(date){
+    return moment(date).format('MMMM Do YYYY , h:mm:ss a')
+    
+  }
+
+
     show()
     scope.submit  = function(input){
     	console.log(input)

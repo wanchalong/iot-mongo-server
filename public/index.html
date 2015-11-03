@@ -47,7 +47,7 @@
 				  		<td class="col-sm-1">{{show.iot_id}}</td>
 				  		<td class="col-sm-1"> {{show.temperature}}</td>
 				  		<td class="col-sm-1">{{show.relative_humidity}}</td>
-				  		<td class="col-sm-4">{{show.timestamp}}</td>
+				  		<td class="col-sm-4">{{scope.toTime(show.timestamp)}}</td>
 				  		<td class="col-sm-1"><button class="btn btn-danger glyphicon glyphicon-trash " ng-click="app.delete(data._id,$index)"></button></td>	
 				  	</tr>
 			    </tbody>
