@@ -4,7 +4,7 @@ var mongoose = require('mongoose')
 
 var model = require('./models/iot.js')
 
-mongoose.connect('mongodb://localhost/db')
+mongoose.connect('mongodb://localhost/iot')
 
 var app = express()
 

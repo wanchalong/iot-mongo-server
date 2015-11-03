@@ -5,13 +5,13 @@ angular.module('app', [])
 
 	
     show()
-    scope.addIOT = function(input){
+    scope.submit  = function(input){
     	console.log(input)
-    	Saveiot()
+    	Saveiot(input)
 
 }
-function Saveiot(input) {
-        $http.post('/api/iot', input)
+function Saveiot(data) {
+        $http.post('/api/iot', data)
           .then(function success (response) {
             console.log(response)
 
