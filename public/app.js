@@ -5,7 +5,7 @@ angular.module('app', [])
 
 	scope.toTime = function(date){
     return moment(date).format('MMMM Do YYYY , h:mm:ss a')
-    
+
   }
 
 
@@ -77,7 +77,7 @@ scope.chart = function(){
                
                   for(var i =0;i<response.data.length;i++){
                     if (response.data[i].iot_id==1){
-                         myLineChart.addData([response.data[i].temperature, response.data[i].relative_humidity] ,response.data[i].timestamp);
+                         myLineChart.addData([response.data[i].temperature, response.data[i].relative_humidity] ,scope.toTime(response.data[i].timestamp));
                        }
                    
                 }
