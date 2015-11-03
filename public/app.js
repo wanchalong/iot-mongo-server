@@ -13,7 +13,7 @@ angular.module('app', [])
 function Saveiot(data) {
         $http.post('/api/iot', data)
           .then(function success (response) {
-            console.log(response)
+            //console.log(response)
 
             alert('Success')
           }, function error (response) {
