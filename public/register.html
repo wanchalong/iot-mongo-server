@@ -16,14 +16,14 @@
 	<title>Register</title>
 </head>
 <body ng-controller="AppController as scope">
-  <form >
+  <form ng-submit="scope.regis(input)">
   <br><br>
   <center>
-    <input type="text" placeholder = "YourName"><br><br>
-     <input type="text" placeholder = "YourSername"><br><br>
-      <input type="email" placeholder = "E-mail"><br><br>
-    <input type="text" placeholder = "Username"><br><br>
-    <input type="password" placeholder = "Password"><br><br>
+    <input type="text" ng-model="input.name" placeholder = "YourName"><br><br>
+     <input type="text" ng-model="input.surname" placeholder = "YourSername"><br><br>
+      <input type="email" ng-model="input.email" placeholder = "E-mail"><br><br>
+    <input type="text" ng-model="input.username" placeholder = "Username"><br><br>
+    <input type="password" ng-model="input.password" placeholder = "Password"><br><br>
     <input type="submit" value="Register"> 
 </center>
 

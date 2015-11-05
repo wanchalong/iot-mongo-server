@@ -10,15 +10,35 @@ angular.module('app', [])
 
 
     show()
+
     scope.submit  = function(input){
     	console.log(input)
     	Saveiot(input)
 
+} 
+    scope.regis  = function(input){
+      console.log(input)
+      SaveMember(input)
+
 }
+
+
 function Saveiot(data) {
         $http.post('/api/iot', data)
           .then(function success (response) {
             //console.log(response)
+
+            alert('Success')
+          }, function error (response) {
+            alert(response.data.message)
+        })
+      }
+
+
+function SaveMember(data) {
+        $http.post('/api/member', data)
+          .then(function success (response) {
+            console.log(response)
 
             alert('Success')
           }, function error (response) {
@@ -39,6 +59,7 @@ function show(){
 scope.tochart = function (){
   window.location = 'chart.html'
 }
+
 scope.chart = function(){
              
       console.log("chart working") 
