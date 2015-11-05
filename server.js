@@ -4,6 +4,8 @@ var mongoose = require('mongoose')
 
 var model = require('./models/iot.js')
 
+var model2 = require('./models/member.js')
+
 mongoose.connect('mongodb://localhost/iot')
 
 var app = express()
@@ -37,7 +39,7 @@ app.post('/api/iot',function(req,res){
 })
 
 app.post('/api/member',function(req,res){
-    var obj = new model(req.body)
+    var obj = new model2(req.body)
     obj.save(function (err, obj) {
       if (err) {
         res.status(500).send(err)
