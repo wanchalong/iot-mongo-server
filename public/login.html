@@ -16,11 +16,11 @@
 	<title>Login</title>
 </head>
 <body ng-controller="AppController as scope">
-  <form >
+  <form ng-submit="scope.login(input)">
   <br><br>
   <center>
-    <input type="text" placeholder = "Username"><br><br>
-    <input type="password" placeholder = "Password"><br><br>
+    <input type="text" ng-model="input.username" placeholder = "Username"><br><br>
+    <input type="password" ng-model="input.password" placeholder = "Password"><br><br>
     <input type="submit" value="Login"> 
 </center>
 

@@ -56,6 +56,19 @@ function show(){
 
 }
 
+
+scope.login = function(input){
+      console.log(input)
+      $http.post('/api/member' , { username : input.username })
+       .then(function success (response) {
+            console.log(response)
+            if(response.data[0].username == input.username ){
+              console.log("have data")
+            }else  console.log("don't have")
+         })
+    }
+
+
 scope.tochart = function (){
   window.location = 'chart.html'
 }
@@ -83,10 +96,6 @@ scope.chart = function(){
             fillColor: "rgba(220,220,220,0.5)",
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
-
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-
             highlightStroke: "rgba(220,220,220,1)",
             data: []
 
@@ -109,8 +118,6 @@ scope.chart = function(){
             fillColor: "rgba(151,187,205,0.5)",
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
             highlightStroke: "rgba(151,187,205,1)",
             data: []
                                   }
