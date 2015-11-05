@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 app.use(express.static('public'))
 
-app.post('/',function(req,res){
+app.post('/',function  (req,res){
     var obj = new model(req.body)
     obj.save(function (err, obj) {
       if (err) {
@@ -27,7 +27,7 @@ app.post('/',function(req,res){
     })
 })
 
-app.post('/api/iot',function(req,res){
+app.post('/api/iot',function (req,res){
     var obj = new model(req.body)
     obj.save(function (err, obj) {
       if (err) {
@@ -38,7 +38,7 @@ app.post('/api/iot',function(req,res){
     })
 })
 
-app.post('/api/member',function(req,res){
+app.post('/api/member',function (req,res){
     var obj = new model2(req.body)
     obj.save(function (err, obj) {
       if (err) {
@@ -48,6 +48,11 @@ app.post('/api/member',function(req,res){
       }
     })
 })
+
+
+
+
+
 
 app.use('/api', require('./routes/api'))
 
