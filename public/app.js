@@ -38,7 +38,7 @@ function Saveiot(data) {
 function SaveMember(data) {
         $http.post('/api/member', data)
           .then(function success (response) {
-            console.log(response)
+            //console.log(response)
 
             alert('Success')
           }, function error (response) {
@@ -70,35 +70,62 @@ scope.chart = function(){
                               labels: [],
                               datasets: [
                                   {
-                                      label: "temperature",
+                                      /*label: "temperature",
                                       fillColor: "rgba(255,0,0,0.1)",
                                       strokeColor: "rgba(255,0,0,1)",
                                       pointColor: "rgba(255,0,0,1)",
                                       pointStrokeColor: "#fff",
                                       pointHighlightFill: "#fff",
                                       pointHighlightStroke: "rgba(220,220,220,1)",
-                                      data: []
+                                      data: []*/
+
+            label: "temperature",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+
+            highlightStroke: "rgba(220,220,220,1)",
+            data: []
+
+
+
                                   },
                                   {
-                                      label: "relative_humidity",
+                                      /*label: "relative_humidity",
                                       fillColor: "rgba(69,187,91,0.1)",
                                       strokeColor: "rgba(69,187,91,1)",
                                       pointColor: "rgba(69,187,91,1)",
                                       pointStrokeColor: "#fff",
                                       pointHighlightFill: "#fff",
                                       pointHighlightStroke: "rgba(151,187,205,1)",
-                                      data: []
+                                      data: []*/
+
+
+
+            label: "relative_humidity",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: []
                                   }
                               ]
                           };
 
                var ctx = document.getElementById("iot").getContext("2d")
-               var myLineChart = new Chart(ctx).Line(data);
+               //var myLineChart = new Chart(ctx).Line(data);
+
+               var myBarChart = new Chart(ctx).Bar(data);
 
                
                   for(var i =0;i<response.data.length;i++){
                     if (response.data[i].iot_id==1){
-                         myLineChart.addData([response.data[i].temperature, response.data[i].relative_humidity] ,scope.toTime(response.data[i].timestamp));
+                         myBarChart.addData([response.data[i].temperature, response.data[i].relative_humidity] ,scope.toTime(response.data[i].timestamp));
                        }
                    
                 }
