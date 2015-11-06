@@ -100,10 +100,10 @@ scope.charttemp = function(){
                                   {
                                                                 
                                         label: "temperature",
-                                        fillColor: "rgba(220,220,220,0.5)",
-                                        strokeColor: "rgba(220,220,220,0.8)",
-                                        highlightFill: "rgba(220,220,220,0.75)",
-                                        highlightStroke: "rgba(220,220,220,1)",
+                                        fillColor: "rgba(255,0,0,0.5)",
+                                        strokeColor: "rgba(255,0,0,0.8)",
+                                        highlightFill: "rgba(255,0,0,0.75)",
+                                        highlightStroke: "rgba(255,0,0,1)",
                                         data: []
 
 
@@ -112,27 +112,27 @@ scope.charttemp = function(){
                                   {
                                                     
                                       label: "relative_humidity",
-                                      fillColor: "rgba(151,187,205,0.5)",
-                                      strokeColor: "rgba(151,187,205,0.8)",
-                                      highlightFill: "rgba(151,187,205,0.75)",
-                                      highlightStroke: "rgba(151,187,205,1)",
+                                      fillColor: "rgba(0,51,102,0.5)",
+                                      strokeColor: "rgba(0,51,102,0.8)",
+                                      highlightFill: "rgba(0,51,102,0.75)",
+                                      highlightStroke: "rgba(0,51,102,1)",
                                       data: []
 
                                         },
 
                                   {
                                         label: "Avg",
-                                      fillColor: "rgba(100,187,205,0.5)",
-                                      strokeColor: "rgba(100,187,205,0.8)",
-                                      highlightFill: "rgba(100,187,205,0.75)",
-                                      highlightStroke: "rgba(100,187,205,1)",
+                                      fillColor: "rgba(255,204,0,0.5)",
+                                      strokeColor: "rgba(255,204,0,0.8)",
+                                      highlightFill: "rgba(255,204,0,0.75)",
+                                      highlightStroke: "rgba(255,204,0,1)",
                                       data: []
                                                             }
                               ]
                           };
 
                var ctx = document.getElementById("temp").getContext("2d")
-               //var myLineChart = new Chart(ctx).Line(data);
+               
 
                var myLineChart = new Chart(ctx).Bar(data);
 
@@ -188,10 +188,10 @@ scope.chartrelative = function(){
                                   {
                                                                 
                                         label: "temperature",
-                                        fillColor: "rgba(220,220,220,0.5)",
-                                        strokeColor: "rgba(220,220,220,0.8)",
-                                        highlightFill: "rgba(220,220,220,0.75)",
-                                        highlightStroke: "rgba(220,220,220,1)",
+                                        fillColor: "rgba(255,0,0,0.5)",
+                                        strokeColor: "rgba(255,0,0,0.8)",
+                                        highlightFill: "rgba(255,0,0,0.75)",
+                                        highlightStroke: "rgba(255,0,0,1)",
                                         data: []
 
 
@@ -200,20 +200,20 @@ scope.chartrelative = function(){
                                   {
                                                     
                                       label: "relative_humidity",
-                                      fillColor: "rgba(151,187,205,0.5)",
-                                      strokeColor: "rgba(151,187,205,0.8)",
-                                      highlightFill: "rgba(151,187,205,0.75)",
-                                      highlightStroke: "rgba(151,187,205,1)",
+                                      fillColor: "rgba(0,51,102,0.5)",
+                                      strokeColor: "rgba(0,51,102,0.8)",
+                                      highlightFill: "rgba(0,51,102,0.75)",
+                                      highlightStroke: "rgba(0,51,102,1)",
                                       data: []
 
                                         },
 
                                   {
                                         label: "Avg",
-                                      fillColor: "rgba(100,187,205,0.5)",
-                                      strokeColor: "rgba(100,187,205,0.8)",
-                                      highlightFill: "rgba(100,187,205,0.75)",
-                                      highlightStroke: "rgba(100,187,205,1)",
+                                      fillColor: "rgba(255,204,0,0.5)",
+                                      strokeColor: "rgba(255,204,0,0.8)",
+                                      highlightFill: "rgba(255,204,0,0.75)",
+                                      highlightStroke: "rgba(255,204,0,1)",
                                       data: []
                                                             }
                               ]

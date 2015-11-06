@@ -19,13 +19,19 @@
 	<title>Chart</title>
 </head>
 <body ng-controller="AppController as scope">
-{{scope.name}}	
-<div ng-init="scope.charttemp()">
-	<center><canvas id="temp" width="1000" height="380"></canvas>
-</div>
+<br>
+ <div class="col-sm-11"></div>
+  <button class="btn btn-info glyphicon glyphicon-home" ng-click="scope.toindex()"> Home</button>
 
+  <br>
+	<center><h1>Temperature</h1></center><br>
+<div ng-init="scope.charttemp()">
+	<center><canvas id="temp" width="1100" height="400" style="border:1px solid grey;"></canvas>
+</div>
+<br>
+<center><h1>Relative_humidity</h1></center><br>
 <div ng-init="scope.chartrelative()">
-	<center><canvas id="relative" width="1000" height="380"></canvas>
+	<center><canvas id="relative" width="1000" height="360" style="border:1px solid grey;"></canvas>
 </div>
 
 </body>
