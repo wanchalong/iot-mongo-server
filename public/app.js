@@ -27,7 +27,7 @@ function Saveiot(data) {
         $http.post('/api/iot', data)
           .then(function success (response) {
             //console.log(response)
-
+            show()
             alert('Success')
           }, function error (response) {
             alert(response.data.message)
@@ -261,20 +261,19 @@ scope.chartrelative = function(){
 
 
 
-scope.Del = function (id,index){
-     
-     $http.delete('/api/iot/'+id)
+ scope.delete = function(id,index){
+        console.log(id);
+        $http.delete('/api/iot/'+id)
           .success(function(data) {
             scope.data.splice(index,1)
-             
+            //window.location='index.html'
+            
           })
           .error(function(data) {
             console.log('Error: ' + data)
           })
-         
- 
-
     }
+
 
 
   })
