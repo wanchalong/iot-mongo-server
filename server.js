@@ -52,6 +52,20 @@ app.post('/api/member',function (req,res){
 
 
 
+app.delete('/api/iot/:id', function (req, res){
+  console.log("f"+req.params.id)
+  //var obj = new Model(req.body)
+    Model.remove({"_id" : req.params.id}).exec(function (err, results) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.send(results)
+      }
+    })
+    
+
+    })*
+
 
 
 app.use('/api', require('./routes/api'))

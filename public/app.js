@@ -247,6 +247,20 @@ scope.chartrelative = function(){
 
 
 
+scope.Del = function (id,index){
+     
+     $http.delete('/api/iot/'+id)
+          .success(function(data) {
+            scope.data.splice(index,1)
+             
+          })
+          .error(function(data) {
+            console.log('Error: ' + data)
+          })
+         
+ 
+
+    }
 
 
   })
