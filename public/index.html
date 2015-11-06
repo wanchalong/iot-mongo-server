@@ -25,8 +25,11 @@
 	</div>
 
 <div class="col-sm-8"></div>
-  <button class="btn btn-success" ng-click="scope.tologin()">Login</button>
-  <button class="btn btn-warning" ng-click="scope.tologin()">Register</button>
+  		<button class="btn btn-success glyphicon glyphicon-user" 
+  			ng-click="scope.tologin()"> Login</button>
+
+  		<button class="btn btn-warning glyphicon glyphicon-edit" 
+  			ng-click="scope.toregis()"> Register</button>
 		<br>
 		<center><h1>Internet of Things</h1>
 		<br>
@@ -54,8 +57,9 @@
   	<!-- <div class="col-sm-4"></div> -->
 
   	<br><br><br><br><br><br><br><br><br><br>
-		<input type="submit" class="btn btn-primary" value="Add"> 
-		<button class="btn btn-danger" ng-click="scope.tochart()">Chart</button>
+	<button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-save"> Add </button>
+		<button class="btn btn-info glyphicon glyphicon-stats" 
+				ng-click="scope.tologin()"> ViewReport</button>
 
 	</form>
 	</center>

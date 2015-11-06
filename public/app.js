@@ -1,7 +1,7 @@
 angular.module('app', [])
   .controller('AppController', function ($http) {
     var scope = this
-    scope.name = 'Nati'
+    //scope.name = 'Nati'
 
 	scope.toTime = function(date){
     return moment(date).format('MMMM Do YYYY , h:mm:ss a')
@@ -66,7 +66,9 @@ scope.tochart = function (){
 scope.tologin = function (){
 window.location = 'login.html'
 }
-
+scope.toregis = function (){
+window.location = 'register.html'
+}
 
 scope.login = function(){
 
