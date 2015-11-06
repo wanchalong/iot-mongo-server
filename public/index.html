@@ -14,49 +14,85 @@
   <title>IOT</title>
 </head>
 <body ng-controller="AppController as scope">
-  
+<br>
 
+<div class="col-sm-2">
+	 <div class="input-group">
+	<div class="input-group-addon">Search</div>
+	<input type= "text" class="form-control input-lg" placeholder = "IOT ID"
+			ng-model="byid">
+	</div>
+	</div>
+
+<div class="col-sm-8"></div>
+  <button class="btn btn-success" ng-click="scope.tologin()">Login</button>
+  <button class="btn btn-warning" ng-click="scope.tologin()">Register</button>
+		<br>
+		<center><h1>Internet of Things</h1>
+		<br>
 	<form ng-submit='scope.submit(input)'>
 
   <!--timestamp: <input type="text" ng-model="input.timestamp"><br>-->
 
-   iot_id:  <input type="text" ng-model="input.iot_id"><br>
-     temperature: <input type="text" ng-model="input.temperature"><br>
-       relative_humidity: <input type="text" ng-model="input.relative_humidity"><br>
+  <div class="col-sm-4"></div>
 
-	<input type="submit" value="add"> 
+  		<div class="col-sm-4">
+  			<input type="text" class="form-control input-lg" placeholder= "IOT ID" 
+  			ng-model="input.iot_id"> 
+
+  			<br>
+
+   			<input type="text" class="form-control input-lg" placeholder= "Temperature" 
+   			ng-model="input.temperature">
+
+   			<br>
+			<input type="text" class="form-control input-lg" placeholder = "Relative_Humidity" 
+			ng-model="input.relative_humidity">
+
+  	</div>
+
+  	<!-- <div class="col-sm-4"></div> -->
+
+  	<br><br><br><br><br><br><br><br><br><br>
+		<input type="submit" class="btn btn-primary" value="Add"> 
+		<button class="btn btn-danger" ng-click="scope.tochart()">Chart</button>
 
 	</form>
+	</center>
 
-	<button ng-click="scope.tochart()">Chart</button>
+	
 
-	<button ng-click="scope.tologin()">Login</button>
+	
+	
+	
 
-	<input type= "text" ng-model="byid">
-
-
-<table>
+<table class="table table-hover">
 				<thead>
 			      <tr>
-			        <th class="col-sm-1">No.</th>
-			        <th class="col-sm-1">IoT ID</th>
-			        <th class="col-sm-1">Temperature</th>
-				    <th class="col-sm-2">Relative Humidity</th>
-				    <th class="col-sm-1">Date</th>
-			         <th class="col-sm-2">Delete</th>
+			        <th class="col-sm-1"><center>No.</center></th>
+			        <th class="col-sm-1"><center>IOT ID</center></th>
+			        <th class="col-sm-1"><center>Temperature</center></th>
+				    <th class="col-sm-2"><center>Relative Humidity</center></th>
+				    <th class="col-sm-1"><center>Date</center></th>
+			         <th class="col-sm-2"><center>Delete</center></th>
 
 			      </tr>
 			    </thead>
 			    <tbody>
 			    	<tr ng-repeat="show in scope.data | filter:{iot_id:byid}">
 
-			    		<td class="col-sm-1">{{$index}}</td>
-				  		<td class="col-sm-1">{{show.iot_id}}</td>
-				  		<td class="col-sm-1"> {{show.temperature}}</td>
-				  		<td class="col-sm-1">{{show.relative_humidity}}</td>
-				  		<td class="col-sm-4">{{scope.toTime(show.timestamp)}}</td>
+			    	<td class="col-sm-1"><center>{{$index}}</center></td>
+				  	<td class="col-sm-1"><center>{{show.iot_id}}</center></td>
+				  	<td class="col-sm-1"><center>{{show.temperature}}</center></td>
+				  	<td class="col-sm-1"><center>{{show.relative_humidity}}</center></td>
+				  	<td class="col-sm-4"><center>{{scope.toTime(show.timestamp)}}</center></td>
 
-				  		<td class="col-sm-1"><button class="btn btn-danger glyphicon glyphicon-trash " ng-click="scope.delete(show._id,$index)"></button></td>
+				  	<td class="col-sm-1">
+				  	<center>
+				  		<button class="btn btn-danger glyphicon glyphicon-trash " ng-click="scope.delete(show._id,$index)">
+				  		</button>
+				  	</center>
+				  	</td>
 
 
 	
