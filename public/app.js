@@ -120,7 +120,7 @@ scope.charttemp = function(){
                                         },
 
                                   {
-                                        label: "ggggg",
+                                        label: "Avg",
                                       fillColor: "rgba(100,187,205,0.5)",
                                       strokeColor: "rgba(100,187,205,0.8)",
                                       highlightFill: "rgba(100,187,205,0.75)",
@@ -135,7 +135,7 @@ scope.charttemp = function(){
 
                var myLineChart = new Chart(ctx).Bar(data);
 
-                for(var s = 0;s<5;s++){
+                for(var s = 0;s<10;s++){
                       var max = 0;
                       var sum = 0;
                       var count = 0;
@@ -208,7 +208,7 @@ scope.chartrelative = function(){
                                         },
 
                                   {
-                                        label: "ggggg",
+                                        label: "Avg",
                                       fillColor: "rgba(100,187,205,0.5)",
                                       strokeColor: "rgba(100,187,205,0.8)",
                                       highlightFill: "rgba(100,187,205,0.75)",
@@ -222,7 +222,7 @@ scope.chartrelative = function(){
 
                var myLineChart = new Chart(ctx).Bar(data);
 
-                for(var s = 0;s<5;s++){
+                for(var s = 0;s<10;s++){
                       var max = 0;
                       var sum = 0;
                       var count = 0;

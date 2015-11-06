@@ -5,6 +5,7 @@ var iot = require('../models/iot')
 
 iot.methods(['get', 'put', 'post', 'delete'])
 iot.register(router, '/api/iot')
+iot.register(router, '/')
 
 var member = require('../models/member')
 
