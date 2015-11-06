@@ -8,7 +8,6 @@ angular.module('app', [])
 
   }
 
-
     show()
 
     scope.submit  = function(input){
@@ -22,11 +21,9 @@ angular.module('app', [])
 
 }
 
-
 function Saveiot(data) {
         $http.post('/api/iot', data)
           .then(function success (response) {
-            //console.log(response)
             show()
             alert('Success')
           }, function error (response) {
@@ -38,9 +35,8 @@ function Saveiot(data) {
 function SaveMember(data) {
         $http.post('/api/member', data)
           .then(function success (response) {
-            //console.log(response)
-
             alert('Success')
+            window.location = 'login.html'
           }, function error (response) {
             alert(response.data.message)
         })
@@ -57,8 +53,6 @@ function show(){
 }
 
 
-
-
 scope.tochart = function (){
   window.location = 'chart.html'
 }
@@ -69,6 +63,11 @@ window.location = 'login.html'
 scope.toregis = function (){
 window.location = 'register.html'
 }
+
+scope.toindex =function (){
+window.location = 'http://localhost:3000'
+}
+
 
 scope.login = function(){
 

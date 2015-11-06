@@ -17,8 +17,13 @@
 </head>
 
 <body ng-controller="AppController as scope">
+  
+  <br>
+  <div class="col-sm-10"></div>
+   <button class="btn btn-warning glyphicon glyphicon-edit" 
+        ng-click="scope.toregis()"> Register</button>
+        
   <form ng-submit="scope.login()">
-  <br><br>
   <center>
     <h1>Login</h1><br><br>
     <div class="col-sm-4"></div>
@@ -29,16 +34,15 @@
     <input type="password" class="form-control input-lg" 
           ng-model="scope.password" placeholder = "Password"><br><br>
 
-    <button type="submit" class="btn btn-success glyphicon glyphicon-user">Login</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button class="btn btn-warning glyphicon glyphicon-edit" 
-        ng-click="scope.toregis()"> Register</button>
+    <button type="submit" class="btn btn-success glyphicon glyphicon-user"> Login</button>
+    
     <br>
     </div>
 
 </center>
 
   </form>
-
+  
+         
 </body>
 </html>

@@ -16,18 +16,56 @@
 	<title>Register</title>
 </head>
 <body ng-controller="AppController as scope">
+
+  <br>
+  <div class="col-sm-10"></div>
+  <button class="btn btn-info glyphicon glyphicon-home" ng-click="scope.toindex()"> Home</button>
+
   <form ng-submit="scope.regis(input)">
-  <br><br>
   <center>
-    <input type="text" ng-model="input.name" placeholder = "YourName"><br><br>
-     <input type="text" ng-model="input.surname" placeholder = "YourSername"><br><br>
-      <input type="email" ng-model="input.email" placeholder = "E-mail"><br><br>
-    <input type="text" ng-model="input.username" placeholder = "Username"><br><br>
-    <input type="password" ng-model="input.password" placeholder = "Password"><br><br>
-    <input type="submit" value="Register"> 
+  <h1>Register</h1><br>
+    <div class="col-sm-4"></div>
+       <div class="col-sm-4">
+    <input type="text" class="form-control input-lg" 
+          ng-model="input.name" placeholder = "YourName"><br><br>
+
+     <input type="text" class="form-control input-lg" 
+            ng-model="input.surname" placeholder = "YourSername"><br><br>
+
+      <input type="email" class="form-control input-lg" 
+            ng-model="input.email" placeholder = "E-mail"><br><br>
+
+    <input type="text" class="form-control input-lg" 
+            ng-model="input.username" placeholder = "Username"><br><br>
+
+    <input type="password" class="form-control input-lg"  
+          ng-model="input.password" placeholder = "Password"><br><br>
+
+
+     <button type ="submit" class="btn btn-warning glyphicon glyphicon-edit"> Register</button>
+
+    </div>
 </center>
 
   </form>
+
+
+
+<!-- <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+    <input type="text" class="form-control input-lg" 
+            ng-model="scope.username" placeholder = "Username"><br><br>
+
+    <input type="password" class="form-control input-lg" 
+          ng-model="scope.password" placeholder = "Password"><br><br>
+
+    <button type="submit" class="btn btn-success glyphicon glyphicon-user">Login</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-warning glyphicon glyphicon-edit" 
+        ng-click="scope.toregis()"> Register</button>
+    <br>
+    </div> -->
+
 
 </body>
 </html>
