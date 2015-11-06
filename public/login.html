@@ -15,12 +15,13 @@
   <meta charset="UTF-8">
 	<title>Login</title>
 </head>
+
 <body ng-controller="AppController as scope">
-  <form ng-submit="scope.login(input)">
+  <form ng-submit="scope.login()">
   <br><br>
   <center>
-    <input type="text" ng-model="input.username" placeholder = "Username"><br><br>
-    <input type="password" ng-model="input.password" placeholder = "Password"><br><br>
+    <input type="text" ng-model="scope.username" placeholder = "Username"><br><br>
+    <input type="password" ng-model="scope.password" placeholder = "Password"><br><br>
     <input type="submit" value="Login"> 
 </center>
 

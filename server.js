@@ -68,7 +68,7 @@ app.delete('/api/iot/:id', function (req, res){
 
 
 
-app.use('/api', require('./routes/api'))
+app.use('/', require('./routes/api'))
 
 
 app.listen(3000)

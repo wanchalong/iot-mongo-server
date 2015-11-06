@@ -57,21 +57,35 @@ function show(){
 }
 
 
-scope.login = function(input){
-      console.log(input)
-      $http. get('/api/member' , { username : input.username ,password : input.password})
-       .then(function success (response) {
-            console.log(response)
-            if(response.data[0].username == input.username ){
-              console.log("have data")
-            }else  console.log("don't have")
-         })
-    }
 
 
 scope.tochart = function (){
   window.location = 'chart.html'
 }
+
+scope.tologin = function (){
+window.location = 'login.html'
+}
+
+
+scope.login = function(){
+
+      console.log(scope.username,scope.password)
+
+      $http.post('/login' , {username : scope.username, password : scope.password })
+       .then(function success (response) {
+            console.log(response)
+            if(response.data[0] != null){
+              if(response.data[0].username == scope.username ){
+                console.log("have")
+                window.location = "chart.html"
+              }else  console.log("don't have")
+            }else   console.log("don't have")
+         })
+     
+    }
+
+
 
 scope.charttemp = function(){
              
